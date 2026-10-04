@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
         header.setPadding(dp(20), dp(18), dp(20), dp(12));
         header.setBackground(round("#FFFFFF",22));
         TextView title = text("BoardAI", 30, true, "#162033");
-        TextView sub = text("בינה מקומית למשחקי קופסה", 14, false, "#68758A");
+        TextView sub = text("עוזר ידע בעברית • אופליין • קל ומהיר", 14, false, "#68758A");
         header.addView(title);
         header.addView(sub, lp(-1,-2,0,3,0,0));
         TextView offline = text("●  עובד בלי אינטרנט", 12, true, "#3929C7");
@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
         filters = new LinearLayout(this);
         filters.setPadding(dp(14),0,dp(14),dp(8));
         filters.setGravity(Gravity.CENTER_VERTICAL);
-        addFilter("הכול"); addFilter("קטאן"); addFilter("מונופול"); addFilter("פוקר");
+        addFilter("הכול"); addFilter("משחקים"); addFilter("קטאן"); addFilter("מונופול"); addFilter("פוקר"); addFilter("בית"); addFilter("מחשב"); addFilter("יום יום");
         root.addView(filters, lp(-1,-2));
 
         ScrollView sc = new ScrollView(this);
@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
         input.setSingleLine(false);
         input.setMinLines(1);
         input.setMaxLines(4);
-        input.setHint("שאל שאלה על חוק או מצב במשחק…");
+        input.setHint("שאל שאלה על משחק, מחשב, בית או תקלה…");
         input.setTextSize(15);
         input.setTextColor(Color.parseColor("#162033"));
         input.setHintTextColor(Color.parseColor("#8A94A6"));
@@ -89,7 +89,7 @@ public class MainActivity extends Activity {
 
         root.addView(composer, lp(-1,-2));
         setContentView(root);
-        showBot("שלום! אני BoardAI 👋\nאני עובד בלי אינטרנט ומכיר חוקים ומצבי משחק בקטאן, מונופול ופוקר.\n\nלדוגמה: \"יצא 7 בקטאן — מה עושים?\" או \"במונופול לא קנו את הנכס — מה קורה?\"");
+        showBot("שלום! אני BoardAI 👋\nאני עובד בלי אינטרנט.\n\nאפשר לשאול על קטאן, מונופול ופוקר, וגם על תקלות במחשב, בבית ושאלות שימושיות של יום־יום.\n\nלדוגמה: \"יצא 7 בקטאן — מה עושים?\" או \"המחשב איטי — מאיפה מתחילים?\"");
     }
 
     void ask() {
