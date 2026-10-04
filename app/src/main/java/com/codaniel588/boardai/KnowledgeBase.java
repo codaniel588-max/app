@@ -168,9 +168,9 @@ public final class KnowledgeBase {
     private static String normalize(String s) {
         String n = Normalizer.normalize(s == null ? "" : s, Normalizer.Form.NFKC)
                 .toLowerCase(Locale.ROOT);
-        n = n.replace("־","-").replace("’","'").replace("״",""").replace("״",""");
-        n = n.replaceAll("[^\p{L}\p{N} -]", " ");
-        n = n.replaceAll("\s+", " ").trim();
+        n = n.replace("־","-").replace("’","'").replace("״","\"");
+        n = n.replaceAll("[^\\p{L}\\p{N} -]", " ");
+        n = n.replaceAll("\\s+", " ").trim();
         n = n.replace("קטן","קטאן").replace("קטאןן","קטאן").replace("מונפול","מונופול");
         return n;
     }
