@@ -5,7 +5,7 @@ import java.util.*;
 
 public final class KnowledgeBase {
     public static final class Entry {
-        final String game, title,[] keys;
+        final String game, title; final String[] keys;
         final String answer;
         Entry(String game, String title, String keys, String answer) {
             this.game=game; this.title=title;
